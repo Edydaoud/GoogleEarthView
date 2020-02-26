@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:fitsSystemWindows="true"
+    tools:context=".main.presentation.activity.MainActivity">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/mainImageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/nextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin"
+        android:background="@drawable/ic_filter_state"
+        android:padding="@dimen/margin"
+        android:src="@drawable/ic_chevron_right_black_24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/previousButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin"
+        android:background="@drawable/ic_filter_state"
+        android:padding="@dimen/margin"
+        android:src="@drawable/ic_chevron_left_black_24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/topGradient"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:background="@drawable/bottom_gradient"
+        app:layout_constraintBottom_toBottomOf="@+id/imageTitleTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageTitleTextView" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/imageTitleTextView"
+        style="@style/TextAppearance.AppCompat.Small"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/setAsButton"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Ngaanyatjarra-Giles" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/setAsButton"
+        android:layout_width="52dp"
+        android:layout_height="0dp"
+        android:background="?attr/selectableItemBackground"
+        android:src="@drawable/ic_wallpaper_white_24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/topGradient"
+        app:layout_constraintEnd_toStartOf="@+id/shareButton"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@+id/imageTitleTextView"
+        app:layout_constraintTop_toTopOf="@+id/topGradient" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/shareButton"
+        android:layout_width="52dp"
+        android:layout_height="0dp"
+        android:background="?attr/selectableItemBackground"
+        android:src="@drawable/ic_share"
+        app:layout_constraintBottom_toBottomOf="@+id/topGradient"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@+id/setAsButton"
+        app:layout_constraintTop_toTopOf="@+id/topGradient" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/uiItemsGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="setAsButton, shareButton, imageTitleTextView, nextButton, previousButton, topGradient" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

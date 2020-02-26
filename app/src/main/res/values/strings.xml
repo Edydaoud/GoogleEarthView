@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Google Earth View</string>
+    <string name="set_wallpaper_target">Set wallpaper as:</string>
+    <string name="wallpaper_target_both">Both</string>
+    <string name="wallpaper_target_home">Home</string>
+    <string name="wallpaper_target_lock">Lockscreen</string>
+</resources>
